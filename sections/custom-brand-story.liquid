@@ -1,0 +1,342 @@
+{% comment %}
+  Custom Brand Story Section - Another Level
+  Sezione personalizzata con design underground/techno style
+{% endcomment %}
+
+<style>
+  .al-brand-story {
+    position: relative;
+    background: #000;
+    color: #fff;
+    padding: 5rem 0;
+    overflow: hidden;
+  }
+
+  .al-brand-story::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.02) 30%, rgba(255, 255, 255, 0.02) 70%, transparent 70%),
+      linear-gradient(-45deg, transparent 30%, rgba(255, 255, 255, 0.02) 30%, rgba(255, 255, 255, 0.02) 70%, transparent 70%);
+    background-size: 60px 60px;
+    opacity: 0.5;
+    animation: patternMove 20s linear infinite;
+  }
+
+  @keyframes patternMove {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 60px 60px, -60px -60px; }
+  }
+
+  .al-story-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .al-story-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+  .al-story-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  }
+
+  .al-story-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes titleGlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+
+  .al-story-title br {
+    display: block;
+  }
+
+  .al-story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .al-story-text {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    opacity: 0.9;
+  }
+
+  .al-story-text p {
+    margin-bottom: 1.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .al-story-text p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 3px;
+    height: calc(100% - 1.2rem);
+    background: linear-gradient(180deg, #fff 0%, transparent 100%);
+  }
+
+  .al-story-text strong {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .al-values-section {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .al-values-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulseGlow 4s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+  }
+
+  .al-values-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .al-values-grid {
+    display: grid;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .al-value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .al-value-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(10px);
+    border-left-color: #ddd;
+  }
+
+  .al-value-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    flex-shrink: 0;
+  }
+
+  .al-value-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .al-value-content p {
+    font-size: 1rem;
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+
+  .al-story-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .al-story-tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    opacity: 0.9;
+    font-weight: 300;
+  }
+
+  @media (max-width: 968px) {
+    .al-story-title {
+      font-size: 2.5rem;
+    }
+
+    .al-story-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .al-values-section {
+      padding: 2rem 1.5rem;
+    }
+
+    .al-values-title {
+      font-size: 1.5rem;
+    }
+
+    .al-value-item {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .al-story-text {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<section class="al-brand-story">
+  <div class="al-story-container">
+
+    <div class="al-story-header">
+      <div class="al-story-badge">🇮🇹 Chi Siamo</div>
+      <h2 class="al-story-title">
+        Da Cinque Amici<br/>
+        Nasce Un Sogno
+      </h2>
+    </div>
+
+    <div class="al-story-content">
+
+      <div class="al-story-text">
+        <p>
+          Siamo <strong>cinque ragazzi siciliani</strong>, uniti da una passione viscerale per lo streetwear e la cultura underground che respiriamo ogni notte. Dalle nostre serate nei club, dagli after party all'alba, dalla techno che batte forte nelle casse, è nato <strong>Another Level</strong>.
+        </p>
+        <p>
+          Non siamo solo un brand di abbigliamento. Siamo il <strong>riflesso della vita notturna</strong>, dell'energia del dancefloor, della libertà di esprimersi senza limiti. Ogni capo che creiamo racconta una storia: quella delle notti passate a ballare, dei momenti condivisi, della qualità che non scende mai a compromessi.
+        </p>
+        <p>
+          Dalla Sicilia al mondo, portiamo con noi l'autenticità di chi <strong>vive la scena</strong>, non la osserva. Perché quando indossi <strong>Another Level</strong>, non stai solo vestendo un capo: stai indossando uno stile di vita.
+        </p>
+      </div>
+
+      <div class="al-values-section">
+        <h3 class="al-values-title">I Nostri Valori</h3>
+
+        <div class="al-values-grid">
+
+          <div class="al-value-item">
+            <div class="al-value-icon">🎵</div>
+            <div class="al-value-content">
+              <h3>Passione per la Musica</h3>
+              <p>Techno, house, underground: la nostra ispirazione</p>
+            </div>
+          </div>
+
+          <div class="al-value-item">
+            <div class="al-value-icon">🌙</div>
+            <div class="al-value-content">
+              <h3>Cultura Notturna</h3>
+              <p>Clubbing, after party, energia fino all'alba</p>
+            </div>
+          </div>
+
+          <div class="al-value-item">
+            <div class="al-value-icon">👕</div>
+            <div class="al-value-content">
+              <h3>Qualità Senza Compromessi</h3>
+              <p>Materiali premium, comfort e stile</p>
+            </div>
+          </div>
+
+          <div class="al-value-item">
+            <div class="al-value-icon">🇮🇹</div>
+            <div class="al-value-content">
+              <h3>Orgoglio Siciliano</h3>
+              <p>Dalle nostre radici al panorama globale</p>
+            </div>
+          </div>
+
+          <div class="al-value-item">
+            <div class="al-value-icon">🔥</div>
+            <div class="al-value-content">
+              <h3>Autenticità</h3>
+              <p>Viviamo ciò che creiamo, ogni giorno</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="al-story-footer">
+      <p class="al-story-tagline">
+        "Non vestiamo solo corpi. Vestiamo anime che battono al ritmo della notte."
+      </p>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Brand Story - Another Level",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Brand Story Custom"
+    }
+  ]
+}
+{% endschema %}
