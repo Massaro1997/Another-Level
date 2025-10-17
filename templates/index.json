@@ -409,7 +409,104 @@
             "vertical_alignment_flex_direction_column": "center",
             "gap": 24
           },
-          "blocks": {}
+          "blocks": {
+            "heading_brand": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Da Cinque Amici<br/>Nasce Un Sogno</h2>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "font_size": "2.5rem",
+                "line_height": "1.2",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 16,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "story_text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Siamo cinque ragazzi siciliani, uniti da una passione viscerale per lo streetwear e la cultura underground che respiriamo ogni notte. Dalle nostre serate nei club, dagli after party all'alba, dalla techno che batte forte nelle casse, è nato <strong>Another Level</strong>.</p><p>Non siamo solo un brand di abbigliamento. Siamo il riflesso della vita notturna, dell'energia del dancefloor, della libertà di esprimersi senza limiti. Ogni capo che creiamo racconta una storia: quella delle notti passate a ballare, dei momenti condivisi, della qualità che non scende mai a compromessi.</p><p>Dalla Sicilia al mondo, portiamo con noi l'autenticità di chi vive la scena, non la osserva. Perché quando indossi <strong>Another Level</strong>, non stai solo vestendo un capo: stai indossando uno stile di vita.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1.1rem",
+                "line_height": "1.8",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 24,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "values_heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h3>I Nostri Valori</h3>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h4",
+                "font": "var(--font-heading--family)",
+                "font_size": "1.5rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 16,
+                "padding-block-end": 12,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            },
+            "values_list": {
+              "type": "text",
+              "settings": {
+                "text": "<p>🎵 <strong>Passione per la Musica</strong> - Techno, house, underground: la nostra ispirazione</p><p>🌙 <strong>Cultura Notturna</strong> - Clubbing, after party, energia fino all'alba</p><p>👕 <strong>Qualità Senza Compromessi</strong> - Materiali premium, comfort e stile</p><p>🇮🇹 <strong>Orgoglio Siciliano</strong> - Dalle nostre radici al panorama globale</p><p>🔥 <strong>Autenticità</strong> - Viviamo ciò che creiamo, ogni giorno</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "1.8",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              }
+            }
+          }
         }
       },
       "name": "Chi Siamo",
