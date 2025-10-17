@@ -392,6 +392,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/ECDTVzOWwAsJKUJ.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
